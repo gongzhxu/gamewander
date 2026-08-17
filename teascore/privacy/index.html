@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TeaScore 隐私政策 · Privacy Policy</title>
+  <meta name="description" content="TeaScore（茶度测试）隐私政策。" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍵</text></svg>" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../../">
+        <span class="mark">G</span>
+        <span>GameWander</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <p class="backlink"><a href="../">← TeaScore</a></p>
+
+      <h1 class="zh">TeaScore 隐私政策</h1>
+      <h1 class="en">TeaScore Privacy Policy</h1>
+      <p class="updated zh">生效日期：2026 年 8 月 17 日</p>
+      <p class="updated en">Effective date: August 17, 2026</p>
+
+      <div class="zh">
+        <p>
+          TeaScore 当前将测试题目、测试结果、语言和购买解锁状态保存在你的设备本地，以提供测试、
+          历史记录和恢复购买等功能。我们不会在当前版本中创建账号，也不会将这些内容上传至我们的服务器。
+        </p>
+        <p>
+          应用内购买由 Apple 处理。我们无法获取你的完整支付信息。
+        </p>
+        <p>
+          如未来版本改变数据处理方式，我们会在更新应用前同步更新本政策。
+        </p>
+      </div>
+
+      <div class="en">
+        <p>
+          TeaScore stores your quiz questions, results, language, and purchase-unlock state locally on
+          your device to provide testing, history, and purchase restoration. We do not create accounts
+          in the current version, nor upload this content to our servers.
+        </p>
+        <p>
+          In-app purchases are handled by Apple. We do not receive your full payment information.
+        </p>
+        <p>
+          If a future version changes how data is handled, we will update this policy before releasing
+          the update.
+        </p>
+      </div>
+
+      <div class="contact-box">
+        <div class="label zh">隐私问题请联系</div>
+        <div class="label en">Privacy questions</div>
+        <a href="mailto:gongzhxu@gmail.com">gongzhxu@gmail.com</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© 2026 GameWander</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var en = new URLSearchParams(location.search).get("lang") === "en";
+      document.documentElement.lang = en ? "en" : "zh-Hans";
+      document.querySelectorAll(en ? ".zh" : ".en").forEach(function (el) {
+        el.hidden = true;
+      });
+    })();
+  </script>
+</body>
+</html>

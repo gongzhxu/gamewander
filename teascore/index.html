@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TeaScore · 茶度测试</title>
+  <meta name="description" content="测测你是哪种茶系人格。30 道趣味选择题，解锁你的本命茶型与专属茶度报告。" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍵</text></svg>" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../">
+        <span class="mark">G</span>
+        <span>GameWander</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <h1>TeaScore · 茶度测试</h1>
+      <p class="lede zh">测测你是哪种茶系人格</p>
+      <p class="lede en">Discover Your Tea Personality</p>
+
+      <p class="zh">
+        茶度测试是一款轻松有趣的茶系人格测试工具。通过 30 道情境选择题，看看你更像哪一杯茶，
+        获得你的茶度分数与专属茶型人格。无论是自己探索，还是和朋友、同事一起测一测，都能发现不同性格里的有趣一面。
+      </p>
+      <p class="en">
+        TeaScore is a lighthearted tea personality quiz. Answer 30 situational questions to discover
+        which tea type fits you best, see your TeaScore, and explore your unique tea personality.
+        Take it for yourself or share it with friends and coworkers.
+      </p>
+
+      <h2 class="zh">你可以获得</h2>
+      <h2 class="en">What you get</h2>
+      <ul class="zh">
+        <li>茶度分数与茶系人格结果</li>
+        <li>多种茶型人格图鉴</li>
+        <li>历史测试记录</li>
+        <li>可分享的测试结果卡片</li>
+      </ul>
+      <ul class="en">
+        <li>A TeaScore and tea personality result</li>
+        <li>A gallery of tea personalities</li>
+        <li>A history of your quiz results</li>
+        <li>A shareable result card</li>
+      </ul>
+
+      <h2 class="zh">完整报告</h2>
+      <h2 class="en">Full Report</h2>
+      <p class="zh">
+        购买「完整报告永久解锁」后，还可查看六维能力雷达图、各维度分数详解、茶型深度分析与个性化成长建议。
+        一次购买，永久解锁。
+      </p>
+      <p class="en">
+        Unlock the Full Report once to access a six-dimension ability radar, detailed dimension insights,
+        an in-depth tea personality analysis, and personalized growth suggestions. One purchase unlocks all reports permanently.
+      </p>
+
+      <p class="zh" style="margin-top: 32px;">
+        <a href="./support/">技术支持</a> · <a href="./privacy/">隐私政策</a>
+      </p>
+      <p class="en" style="margin-top: 32px;">
+        <a href="./support/?lang=en">Support</a> · <a href="./privacy/?lang=en">Privacy Policy</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© 2026 GameWander</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var en = new URLSearchParams(location.search).get("lang") === "en";
+      document.documentElement.lang = en ? "en" : "zh-Hans";
+      document.querySelectorAll(en ? ".zh" : ".en").forEach(function (el) {
+        el.hidden = true;
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TeaScore 技术支持 · Support</title>
+  <meta name="description" content="TeaScore（茶度测试）技术支持与常见问题。" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍵</text></svg>" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../../">
+        <span class="mark">G</span>
+        <span>GameWander</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <p class="backlink"><a href="../">← TeaScore</a></p>
+
+      <h1 class="zh">茶度测试（TeaScore）技术支持</h1>
+      <h1 class="en">TeaScore Support</h1>
+
+      <div class="contact-box">
+        <div class="label zh">联系邮箱</div>
+        <div class="label en">Contact</div>
+        <a href="mailto:gongzhxu@gmail.com">gongzhxu@gmail.com</a>
+      </div>
+
+      <p class="zh">如在使用中遇到问题，请通过上方邮箱联系我们。</p>
+      <p class="en">If you run into any issues, reach us at the email above.</p>
+
+      <h2 class="zh">常见问题</h2>
+      <h2 class="en">FAQ</h2>
+
+      <ol class="faq">
+        <li>
+          <div class="q zh">为什么购买后仍未解锁？</div>
+          <div class="q en">Why isn't my purchase unlocked?</div>
+          <p class="a zh">请在结果页的付费墙点击「恢复购买」，并确认使用了购买时的 Apple ID。</p>
+          <p class="a en">Tap "Restore Purchase" on the paywall in the results page, and make sure you're using the same Apple ID you used to buy.</p>
+        </li>
+        <li>
+          <div class="q zh">如何反馈题目或结果问题？</div>
+          <div class="q en">How do I report a question or result issue?</div>
+          <p class="a zh">请发送截图、设备型号、iOS 版本和问题描述至上方邮箱。</p>
+          <p class="a en">Email a screenshot, your device model, iOS version, and a description to the address above.</p>
+        </li>
+        <li>
+          <div class="q zh">测试结果是否具有诊断作用？</div>
+          <div class="q en">Are the results diagnostic?</div>
+          <p class="a zh">不具有。TeaScore 仅供娱乐和自我探索参考，不构成心理诊断或专业建议。</p>
+          <p class="a en">No. TeaScore is for entertainment and self-exploration only; it is not psychological or professional advice.</p>
+        </li>
+      </ol>
+
+      <p class="zh" style="margin-top: 32px;">隐私政策：<a href="../privacy/">查看隐私政策</a></p>
+      <p class="en" style="margin-top: 32px;">Privacy policy: <a href="../privacy/?lang=en">Read the privacy policy</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© 2026 GameWander</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var en = new URLSearchParams(location.search).get("lang") === "en";
+      document.documentElement.lang = en ? "en" : "zh-Hans";
+      document.querySelectorAll(en ? ".zh" : ".en").forEach(function (el) {
+        el.hidden = true;
+      });
+    })();
+  </script>
+</body>
+</html>
