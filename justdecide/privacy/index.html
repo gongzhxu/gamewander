@@ -22,6 +22,10 @@
         <a href="../../#about" class="en">About</a>
         <a href="../../#contact" class="zh">联系</a>
         <a href="../../#contact" class="en">Contact</a>
+        <button class="lang-toggle" type="button" aria-label="切换语言 / Switch language">
+          <span class="zh">EN</span>
+          <span class="en">中文</span>
+        </button>
       </nav>
     </div>
   </header>
@@ -117,11 +121,21 @@
 
   <script>
     (function () {
-      var en = new URLSearchParams(location.search).get("lang") === "en";
-      document.documentElement.lang = en ? "en" : "zh-Hans";
-      document.querySelectorAll(en ? ".zh" : ".en").forEach(function (el) {
-        el.hidden = true;
-      });
+      var html = document.documentElement;
+      var KEY = "gw_lang";
+      var fromUrl = new URLSearchParams(location.search).get("lang");
+      var stored = null;
+      try { stored = localStorage.getItem(KEY); } catch (e) {}
+      var lang = fromUrl || stored || "zh-Hans";
+      html.lang = lang === "en" ? "en" : "zh-Hans";
+      var toggle = document.querySelector(".lang-toggle");
+      if (toggle) {
+        toggle.addEventListener("click", function () {
+          var next = html.lang === "en" ? "zh-Hans" : "en";
+          html.lang = next;
+          try { localStorage.setItem(KEY, next); } catch (e) {}
+        });
+      }
     })();
   </script>
 </body>
