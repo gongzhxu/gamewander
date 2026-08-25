@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,7 +7,20 @@
   <meta name="description" content="TeaScore 茶度测试：30 道情境选择题，解锁你的本命茶型与专属茶度报告。" />
   <link rel="stylesheet" href="../assets/style.css" />
   <link rel="icon" href="images/app-icon.png" />
+  <script>
+    (function () {
+      var html = document.documentElement;
+      var KEY = "gw_lang";
+      var fromUrl = new URLSearchParams(location.search).get("lang");
+      var stored = null;
+      try { stored = localStorage.getItem(KEY); } catch (e) {}
+      var nav = (navigator.language || navigator.userLanguage || "").toLowerCase();
+      var lang = fromUrl || stored || (nav.indexOf("zh") === 0 ? "zh-Hans" : "en");
+      html.lang = lang === "en" ? "en" : "zh-Hans";
+    })();
+  </script>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container nav-row">
@@ -135,11 +148,6 @@
     (function () {
       var html = document.documentElement;
       var KEY = "gw_lang";
-      var fromUrl = new URLSearchParams(location.search).get("lang");
-      var stored = null;
-      try { stored = localStorage.getItem(KEY); } catch (e) {}
-      var lang = fromUrl || stored || "zh-Hans";
-      html.lang = lang === "en" ? "en" : "zh-Hans";
       var toggle = document.querySelector(".lang-toggle");
       if (toggle) {
         toggle.addEventListener("click", function () {

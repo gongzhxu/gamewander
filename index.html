@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,7 +7,20 @@
   <meta name="description" content="GameWander 是一支打造小而有趣独立游戏与趣味应用的工作室，随开随玩。" />
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="icon" href="teascore/images/app-icon.png" />
+  <script>
+    (function () {
+      var html = document.documentElement;
+      var KEY = "gw_lang";
+      var fromUrl = new URLSearchParams(location.search).get("lang");
+      var stored = null;
+      try { stored = localStorage.getItem(KEY); } catch (e) {}
+      var nav = (navigator.language || navigator.userLanguage || "").toLowerCase();
+      var lang = fromUrl || stored || (nav.indexOf("zh") === 0 ? "zh-Hans" : "en");
+      html.lang = lang === "en" ? "en" : "zh-Hans";
+    })();
+  </script>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container nav-row">
@@ -189,11 +202,6 @@
     (function () {
       var html = document.documentElement;
       var KEY = "gw_lang";
-      var fromUrl = new URLSearchParams(location.search).get("lang");
-      var stored = null;
-      try { stored = localStorage.getItem(KEY); } catch (e) {}
-      var lang = fromUrl || stored || "zh-Hans";
-      html.lang = lang === "en" ? "en" : "zh-Hans";
       var toggle = document.querySelector(".lang-toggle");
       if (toggle) {
         toggle.addEventListener("click", function () {
