@@ -269,13 +269,22 @@ html[lang="en"] .zh { display: none; }
 .section-head p { margin: 0; color: var(--muted); }
 
 /* ===== 作品 / 游戏卡片 ===== */
+.games-carousel { position: relative; }
 .games-grid {
-  display: grid;
-  gap: 24px;
-}
-.game-card {
   display: flex;
-  gap: 28px;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 4px 4px 16px;
+  scrollbar-width: none;
+}
+.games-grid::-webkit-scrollbar { display: none; }
+.game-card {
+  flex: 0 0 340px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   align-items: flex-start;
   padding: 32px;
   border: 1px solid var(--border);
@@ -340,7 +349,10 @@ html[lang="en"] .zh { display: none; }
 }
 
 .more-card {
+  flex: 0 0 340px;
+  scroll-snap-align: start;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 28px;
@@ -348,8 +360,33 @@ html[lang="en"] .zh { display: none; }
   border-radius: 18px;
   color: var(--muted);
   text-align: center;
-  min-height: 120px;
+  min-height: 200px;
 }
+
+/* 游戏左右翻动箭头 */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--fg);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.carousel-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.carousel-btn.prev { left: -14px; }
+.carousel-btn.next { right: -14px; }
 
 /* ===== 关于 ===== */
 .about-grid {
@@ -471,7 +508,8 @@ html[lang="en"] .zh { display: none; }
   .nav { gap: 2px; }
   .nav a { padding: 8px 8px; font-size: 14px; }
   .hero { padding: 56px 0 48px; }
-  .game-card { flex-direction: column; padding: 24px; }
+  .game-card { flex-direction: column; padding: 24px; flex-basis: 280px; }
+  .more-card { flex-basis: 280px; }
   .game-card .icon { width: 64px; height: 64px; font-size: 34px; }
   .game-card .arrow { display: none; }
   .section { padding: 48px 0; }

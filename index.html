@@ -62,7 +62,8 @@
           <h2 class="en">Our Games</h2>
         </div>
 
-        <div class="games-grid">
+        <div class="games-carousel">
+          <div class="games-grid" id="gamesGrid">
           <div class="game-card">
             <a class="icon" href="./teascore/"><img src="teascore/images/app-icon.png" alt="TeaScore 应用图标" /></a>
             <div class="body">
@@ -125,6 +126,10 @@
             <span class="zh">更多游戏，敬请期待</span>
             <span class="en">More games coming soon</span>
           </div>
+          </div>
+
+          <button class="carousel-btn prev" type="button" aria-label="上一页">‹</button>
+          <button class="carousel-btn next" type="button" aria-label="下一页">›</button>
         </div>
       </div>
     </section>
@@ -207,6 +212,20 @@
       if (new URLSearchParams(location.search).get("lang") === "en") {
         document.documentElement.lang = "en";
       }
+    })();
+  </script>
+  <script>
+    (function () {
+      var grid = document.getElementById("gamesGrid");
+      if (!grid) return;
+      var prev = document.querySelector(".carousel-btn.prev");
+      var next = document.querySelector(".carousel-btn.next");
+      var step = function () {
+        var card = grid.querySelector(".game-card, .more-card");
+        return card ? card.offsetWidth + 24 : 340;
+      };
+      prev.addEventListener("click", function () { grid.scrollBy({ left: -step(), behavior: "smooth" }); });
+      next.addEventListener("click", function () { grid.scrollBy({ left: step(), behavior: "smooth" }); });
     })();
   </script>
 </body>
