@@ -12,6 +12,10 @@ teascore/
   index.html                # TeaScore 介绍页（营销网址）
   support/index.html        # TeaScore 技术支持
   privacy/index.html        # TeaScore 隐私政策
+justdecide/
+  index.html                # 我来定（JustDecide）介绍页（营销网址）
+  support/index.html        # 我来定 技术支持
+  privacy/index.html        # 我来定 隐私政策
 assets/style.css            # 共享样式
 ```
 
@@ -31,9 +35,19 @@ assets/style.css            # 共享样式
 | 隐私政策网址（英文） | `https://gongzhxu.github.io/gamewander/teascore/privacy/?lang=en` |
 | 营销网址（可选） | `https://gongzhxu.github.io/gamewander/teascore/` |
 
+**JustDecide（我来定）**：
+
+| 字段 | 网址 |
+| --- | --- |
+| 技术支持网址（中文） | `https://gongzhxu.github.io/gamewander/justdecide/support/` |
+| 技术支持网址（英文） | `https://gongzhxu.github.io/gamewander/justdecide/support/?lang=en` |
+| 隐私政策网址（中文） | `https://gongzhxu.github.io/gamewander/justdecide/privacy/` |
+| 隐私政策网址（英文） | `https://gongzhxu.github.io/gamewander/justdecide/privacy/?lang=en` |
+| 营销网址（可选） | `https://gongzhxu.github.io/gamewander/justdecide/` |
+
 > 页面默认显示简体中文，带 `?lang=en` 时显示英文，与 App Store Connect 的双语字段一一对应。
 
 ## 新增一个游戏
 
-1. 新建 `games/<slug>/`，复制 `teascore/` 下的 `support/` 和 `privacy/` 结构，替换文案与邮箱。
+1. 新建 `<slug>/`（如 `justdecide/`），复制 `teascore/` 下的 `support/` 和 `privacy/` 结构，替换文案与邮箱。
 2. 在首页 `index.html` 的 `.games` 区块加一张 `game-card`。

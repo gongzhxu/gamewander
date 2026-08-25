@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>我来定 · JustDecide — 选择困难？转一下，帮你决定</title>
+  <meta name="description" content="我来定（JustDecide）：六种决策方式（抛硬币、随机选择、幸运转盘、二选一、直觉测试、掷骰子），告别选择困难。" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="icon" href="images/app-icon.png" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="brand" href="../">
+        <span class="mark">🍃</span>
+        <span>GameWander</span>
+      </a>
+      <nav class="nav">
+        <a href="../#games" class="zh">游戏</a>
+        <a href="../#games" class="en">Games</a>
+        <a href="../#about" class="zh">关于</a>
+        <a href="../#about" class="en">About</a>
+        <a href="../#contact" class="zh">联系</a>
+        <a href="../#contact" class="en">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero app-hero" id="top">
+      <div class="container">
+        <img class="app-icon" src="images/app-icon.png" alt="我来定 应用图标" width="120" height="120" />
+        <h1>我来定 · JustDecide</h1>
+        <p class="tagline zh">选择困难？转一下，帮你决定</p>
+        <p class="tagline en">Torn? Just Decide.</p>
+        <p class="sub zh">六种决策方式，一个 App 搞定：抛硬币、随机选择、幸运转盘、二选一、直觉测试、掷骰子。所有决定只保存在本机，不上传云端，保护隐私。</p>
+        <p class="sub en">Six ways to decide in one app: Coin Flip, Random Pick, Lucky Wheel, This or That, Intuition Test, and Roll Dice. Every decision stays on your device.</p>
+        <div class="cta">
+          <a class="btn zh" href="#features">了解玩法 ↓</a>
+          <a class="btn en" href="#features">See how it works ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container" style="max-width: 760px;">
+        <h2 class="zh" style="text-align:center;">你可以获得</h2>
+        <h2 class="en" style="text-align:center;">What you get</h2>
+        <ul class="zh">
+          <li>六种决策方式，一键开始</li>
+          <li>支持 9 种语言，跟随系统</li>
+          <li>决策历史按天归档</li>
+          <li>常用纠结存成模板</li>
+          <li>内置内容安全提示</li>
+        </ul>
+        <ul class="en">
+          <li>Six decision methods, one tap to start</li>
+          <li>9 languages, follows your system</li>
+          <li>History grouped by day</li>
+          <li>Save frequent dilemmas as templates</li>
+          <li>Built-in safety notice</li>
+        </ul>
+
+        <h2 class="zh" style="margin-top:32px;">解锁 Pro</h2>
+        <h2 class="en" style="margin-top:32px;">Unlock Pro</h2>
+        <p class="zh">免费下载，内含一次性买断「我来定 Pro」：解锁随机选择、幸运转盘、二选一、直觉测试，以及决策模板和完整历史。一次购买，永久解锁。</p>
+        <p class="en">Free to download, with a one-time "JustDecide Pro" purchase to unlock Random Pick, Lucky Wheel, This or That, Intuition Test, plus decision templates and full history. Buy once, unlock forever.</p>
+      </div>
+    </section>
+
+    <section class="section alt" id="links">
+      <div class="container" style="max-width: 760px;">
+        <div class="section-head">
+          <div class="kicker zh">支持</div>
+          <div class="kicker en">Support</div>
+          <h2 class="zh">需要帮助？</h2>
+          <h2 class="en">Need help?</h2>
+        </div>
+        <p class="zh" style="text-align:center;">
+          <a href="./support/">技术支持</a> · <a href="./privacy/">隐私政策</a>
+        </p>
+        <p class="en" style="text-align:center;">
+          <a href="./support/?lang=en">Support</a> · <a href="./privacy/?lang=en">Privacy Policy</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-row">
+        <span class="footer-brand">GameWander</span>
+        <span class="footer-sep">|</span>
+        <span class="footer-copy">© 2026 GameWander</span>
+      </div>
+      <div class="footer-links">
+        <a href="../" class="zh">首页</a><a href="../" class="en">Home</a>
+        <span class="footer-dot">·</span>
+        <a href="./support/" class="zh">技术支持</a><a href="./support/" class="en">Support</a>
+        <span class="footer-dot">·</span>
+        <a href="./privacy/" class="zh">隐私政策</a><a href="./privacy/" class="en">Privacy</a>
+      </div>
+      <div class="footer-meta">
+        <a href="mailto:gongzhxu@gmail.com">gongzhxu@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      if (new URLSearchParams(location.search).get("lang") === "en") {
+        document.documentElement.lang = "en";
+      }
+    })();
+  </script>
+</body>
+</html>
